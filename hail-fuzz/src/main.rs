@@ -1267,7 +1267,7 @@ impl Fuzzer {
                             task.last_addr,
                             task.current_addr,
                         );
-                    } else {
+                    }else {
                         if let Some(ref cfi_hook) = self.cfi_hook {
                             if let Some(cfi) = cfi_hook.get_mut(&mut self.vm) {
                                 cfi.remove_learned_edge(task.last_addr, task.current_addr);
